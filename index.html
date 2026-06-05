@@ -143,12 +143,12 @@ nav {
   margin-bottom: 36px; line-height: 1.65; max-width: 52ch;
 }
 
-.btn-row { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 48px; }
+.btn-row { display: flex; gap: 14px; margin-bottom: 48px; }
 .btn-primary {
   padding: 12px 28px; background: var(--green); color: var(--bg);
   font-family: 'Jost', sans-serif; font-size: 0.8rem; font-weight: 500;
   letter-spacing: 0.1em; text-transform: uppercase; cursor: pointer;
-  transition: background 0.2s; border: none;
+  transition: background 0.2s; border: none; display:  flex; flex-direction: row; align-items: center; white-space: nowrap;
 }
 .btn-primary:hover { background: var(--green-lt); }
 .btn-outline {
@@ -499,7 +499,7 @@ footer {
       <div class="btn-row">
         <button class="btn-primary" onclick="navigate('contact')">Get in Touch</button>
         <button class="btn-outline" onclick="navigate('publications')">View Research</button>
-        <a class="btn-primary" href="Manikantan, Abhishree Resume (Arbitration) 18 Apr26.pdf" download="Abhishree_Manikantan_Resume.pdf" target="_blank">View Resume</a>
+        <a class="btn-primary" href="./resume.pdf" download="Abhishree_Manikantan_Resume.pdf" target="_blank">View Resume</a>
       </div>
       <div class="chip-row">
         <span class="chip">NY State Bar</span>
@@ -513,7 +513,7 @@ footer {
     <div class="hero-visual">
       <div class="hero-photo-wrap">
         <figure class="hero-photo-fig">
-          <img src="IMG-20260426-WA0081.jpg" alt="Abhishree Manikantan at Cambridge University" class="hero-photo">
+          <img src="./cambridge.jpg" alt="Abhishree Manikantan at Cambridge University" class="hero-photo">
           <figcaption class="hero-photo-cap">Cambridge University, UK</figcaption>
         </figure>
       </div>
@@ -615,7 +615,7 @@ footer {
   <div class="about-hero">
     <div class="about-text">
       <figure class="about-photo-fig">
-        <img src="62c17fec-a33b-4b7d-9bd4-1b2f276d7217.jpg" alt="Abhishree Manikantan at NYU School of Law" class="about-photo">
+        <img src="./nyu.jpg" alt="Abhishree Manikantan at NYU School of Law" class="about-photo">
         <figcaption class="about-photo-cap">NYU School of Law, New York</figcaption>
       </figure>
       <p class="lead">I came to international arbitration through a deep interest in how international law constrains and enables state conduct — particularly in disputes involving natural resources, infrastructure, and regulatory change.</p>

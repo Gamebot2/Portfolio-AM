@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Experience — scroll-linked globe view">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Jost:wght@300;400;500&family=DM+Mono:wght@300;400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Experience (Scroll) | Abhishree Manikantan</title>
+    <style>
+        /* Page-specific layout */
+        .two-col {
+            display: grid;
+            grid-template-columns: 1fr 420px;
+            gap: 36px;
+            max-width: 1140px;
+            margin: 0 auto;
+            padding: 40px;
+        }
+
+        @media(max-width:980px) {
+            .two-col {
+                display: flex;
+                flex-direction: column;
+                padding: 20px;
+            }
+
+            .globe-sticky {
+                position: sticky;
+                top: 64px;
+                width: 100%;
+                min-height: 280px;
+                max-height: 40vh;
+                height: auto;
+                z-index: 1;
+                order: -1;
+                margin-bottom: 24px;
+            }
+
+            .exp-wrap {
+                order: 1;
+            }
+        }
+
+        .globe-sticky {
+            position: sticky;
+            top: 96px;
+            align-self: start;
+            height: 520px;
+            max-height: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--bg-card);
+            border-radius: 18px;
+            box-shadow: 0 24px 48px rgba(17, 27, 24, 0.08);
+            overflow: hidden;
+        }
+
+        #worldMap {
+            width: 100%;
+            height: 100%;
+            display: block;
+            background: transparent;
+        }
+
+        .exp-timeline {
+            padding-right: 12px
+        }
+
+        .exp-item {
+            padding: 18px 14px;
+            border-radius: 6px;
+            transition: background 0.25s, transform 0.18s
+        }
+
+        .exp-item.highlight {
+            background: rgba(45, 90, 61, 0.05);
+            border-left: 3px solid var(--green);
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <a href="index.html" class="nav-logo">AM</a>
+        <div class="nav-links" id="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="experience.html">Experience</a>
+            <a href="publications.html">Publications</a>
+            <a href="contact.html">Contact</a>
+            <a href="contact.html" class="nav-cta btn-primary">Get in Touch</a>
+        </div>
+        <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+            <span></span><span></span><span></span>
+        </div>
+    </nav>
+
+    <main class="page-main">
+        <div class="page-header page-header-flex">
+            <div>
+                <div class="page-header-eyebrow">Experience</div>
+                <h2>Practice, Policy<br><em>and Research</em></h2>
+            </div>
+        </div>
+
+        <div class="two-col">
+            <div class="exp-wrap">
+                <div class="filter-bar">
+                    <button class="filter-btn active" onclick="filterExp('all',this)">All</button>
+                    <button class="filter-btn" onclick="filterExp('arb',this)">Arbitration Practice</button>
+                    <button class="filter-btn" onclick="filterExp('pol',this)">Policy &amp; Research</button>
+                </div>
+
+                <div class="exp-timeline">
+
+                    <!-- THREE CROWNS — UPCOMING -->
+                    <div class="exp-item" data-cats="arb" data-city="london">
+                        <div class="exp-dot"></div>
+                        <div class="exp-card upcoming">
+                            <div class="exp-meta">
+                                <div class="exp-role">Intern, International Arbitration</div>
+                                <div class="exp-dates">Jul – Dec 2026</div>
+                            </div>
+                            <div class="exp-org">Three Crowns LLP · London</div>
+                            <div class="exp-tags">
+                                <span class="exp-upcoming-badge">Confirmed · Upcoming</span>
+                                <span class="exp-tag arb">Arbitration</span>
+                            </div>
+                            <div class="exp-detail">
+                                <ul>
+                                    <li>Three Crowns is a globally recognised arbitration boutique.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- DEBEVOISE -->
+                    <div class="exp-item" data-cats="arb" data-city="london">
+                        <div class="exp-dot"></div>
+                        <div class="exp-card">
+                            <div class="exp-meta">
+                                <div class="exp-role">Intern, International Dispute Resolution Group</div>
+                                <div class="exp-dates">Feb - June 2026</div>
+                            </div>
+                            <div class="exp-org">Debevoise &amp; Plimpton LLP · London</div>
+                            <div class="exp-tags"><span class="exp-tag arb">Arbitration</span></div>
+                            <div class="exp-detail">
+                                <ul>
+                                    <li>Researched and drafted agency law issue in a skeleton argument for a complex
+                                        LCIA insurance arbitration.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- IISD -->
+                    <div class="exp-item" data-cats="pol" data-city="geneva">
+                        <div class="exp-dot"></div>
+                        <div class="exp-card">
+                            <div class="exp-meta">
+                                <div class="exp-role">IFD Fellow, Economic Law &amp; Policy — Sustainable Investments
+                                </div>
+                                <div class="exp-dates">Sept – Nov 2025</div>
+                            </div>
+                            <div class="exp-org">International Institute for Sustainable Development (IISD) · Geneva
+                            </div>
+                            <div class="exp-tags"><span class="exp-tag pol">Policy</span></div>
+                            <div class="exp-detail">
+                                <ul>
+                                    <li>Analysed 60+ stakeholder submissions and produced draft policy report.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- NYU LL.M. -->
+                    <div class="exp-item" data-cats="pol" data-city="newyork">
+                        <div class="exp-dot"></div>
+                        <div class="exp-card">
+                            <div class="exp-meta">
+                                <div class="exp-role">LL.M. at NYU School of Law</div>
+                                <div class="exp-dates">Aug 2024 – Aug 2025</div>
+                            </div>
+                            <div class="exp-org">NYU School of Law · New York</div>
+                            <div class="exp-tags"><span class="exp-tag pol">Graduate Study</span></div>
+                            <div class="exp-detail">
+                                <ul>
+                                    <li>Completed a focused LL.M. in International Business Regulation, Litigation, and
+                                        Arbitration.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- S&A -->
+                    <div class="exp-item" data-cats="arb" data-city="delhi">
+                        <div class="exp-dot"></div>
+                        <div class="exp-card">
+                            <div class="exp-meta">
+                                <div class="exp-role">Associate, Arbitration &amp; Disputes</div>
+                                <div class="exp-dates">Jul 2022 – May 2024</div>
+                            </div>
+                            <div class="exp-org">S&amp;A Law Offices · New Delhi</div>
+                            <div class="exp-tags"><span class="exp-tag arb">Arbitration</span></div>
+                            <div class="exp-detail">
+                                <ul>
+                                    <li>Advised on disputes valued above USD 36 million in infrastructure and mining
+                                        sectors.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- EXPO -->
+                    <div class="exp-item" data-cats="arb" data-city="dubai">
+                        <div class="exp-dot"></div>
+                        <div class="exp-card">
+                            <div class="exp-meta">
+                                <div class="exp-role">Legal Intern — International Contracts &amp; IP</div>
+                                <div class="exp-dates">Dec 2018 &amp; Oct 2021</div>
+                            </div>
+                            <div class="exp-org">IAA Middle East Legal Consultants · Expo 2020 Site Office, Dubai</div>
+                            <div class="exp-tags"><span class="exp-tag arb">Commercial</span></div>
+                            <div class="exp-detail">
+                                <ul>
+                                    <li>Cross-border commercial contracting across a multi-jurisdictional environment.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- DMRC -->
+                    <div class="exp-item" data-cats="arb pol" data-city="delhi">
+                        <div class="exp-dot"></div>
+                        <div class="exp-card">
+                            <div class="exp-meta">
+                                <div class="exp-role">Intern, Legal Department (Arbitration Team)</div>
+                                <div class="exp-dates">Sep 2021</div>
+                            </div>
+                            <div class="exp-org">Delhi Metro Rail Corporation (DMRC) · New Delhi</div>
+                            <div class="exp-tags"><span class="exp-tag arb">Arbitration</span><span
+                                    class="exp-tag pol">State Entity</span></div>
+                            <div class="exp-detail">
+                                <ul>
+                                    <li>Worked with the arbitration team of a major state enterprise.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CEERA -->
+                    <div class="exp-item" data-cats="pol" data-city="delhi">
+                        <div class="exp-dot"></div>
+                        <div class="exp-card">
+                            <div class="exp-meta">
+                                <div class="exp-role">Research Intern</div>
+                                <div class="exp-dates">Jun – Jul 2020</div>
+                            </div>
+                            <div class="exp-org">CEERA, National Law School of India University (NLSIU) · Bengaluru
+                            </div>
+                            <div class="exp-tags"><span class="exp-tag pol">Environmental Law</span></div>
+                            <div class="exp-detail">
+                                <ul>
+                                    <li>Contributed to Chapter 5 in Chemical and Hazardous Waste in India: A Sectoral
+                                        Analysis.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- VIDHI -->
+                    <div class="exp-item" data-cats="pol" data-city="delhi">
+                        <div class="exp-dot"></div>
+                        <div class="exp-card">
+                            <div class="exp-meta">
+                                <div class="exp-role">Member — Kautilya Society</div>
+                                <div class="exp-dates">Oct 2020 – Jun 2021</div>
+                            </div>
+                            <div class="exp-org">Vidhi Centre for Legal Policy · New Delhi</div>
+                            <div class="exp-tags"><span class="exp-tag pol">Policy</span></div>
+                            <div class="exp-detail">
+                                <ul>
+                                    <li>India's most respected independent legal think tank.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <aside class="globe-sticky">
+                <canvas id="worldMap" width="420" height="520"></canvas>
+            </aside>
+        </div>
+
+        <footer>
+            <span
+                style="font-style:italic;font-family:'Cormorant Garamond',serif;font-size:0.95rem;color:var(--ink-mid)">Abhishree
+                Manikantan</span>
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="experience.html">Experience</a>
+                <a href="publications.html">Publications</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <span>India · New York · London</span>
+        </footer>
+
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/topojson-client@3.1.0/dist/topojson-client.min.js"></script>
+    <script>
+        // Simple globe renderer with scroll-to-rotation API
+        (function () {
+            const canvas = document.getElementById('worldMap');
+            const ctx = canvas.getContext('2d');
+            let width = canvas.width, height = canvas.height;
+
+            const projection = d3.geoOrthographic().scale(200).translate([width / 2, height / 2]).clipAngle(90);
+            const path = d3.geoPath(projection, ctx);
+            let landGeo = null;
+
+            const cities = {
+                london: { lon: -0.1, lat: 51.5, label: 'LONDON' },
+                delhi: { lon: 77.2, lat: 28.6, label: 'DELHI' },
+                newyork: { lon: -74, lat: 40.7, label: 'NEW YORK' },
+                geneva: { lon: 6.1, lat: 46.2, label: 'GENEVA' },
+                dubai: { lon: 55.3, lat: 25.2, label: 'DUBAI' }
+            };
+
+            function resize() {
+                width = canvas.clientWidth || canvas.width;
+                height = canvas.clientHeight || canvas.height;
+                canvas.width = Math.max(300, Math.floor(width * devicePixelRatio));
+                canvas.height = Math.max(240, Math.floor((canvas.clientHeight || height) * devicePixelRatio));
+                canvas.style.width = width + 'px';
+                canvas.style.height = (height) + 'px';
+                ctx.setTransform(devicePixelRatio, 0, 0, devicePixelRatio, 0, 0);
+                projection.translate([width / 2, height / 2]).scale(Math.min(width, height) * 0.42);
+                draw();
+            }
+
+            function draw(rotation) {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                ctx.save();
+                ctx.clearRect(0, 0, width, height);
+                if (landGeo) {
+                    ctx.beginPath();
+                    path({ type: 'Sphere' });
+                    ctx.fillStyle = getComputedStyle(document.documentElement).getPropertyValue('--bg') || 'transparent';
+                    ctx.fill();
+
+                    ctx.beginPath();
+                    path(landGeo);
+                    ctx.fillStyle = getComputedStyle(document.documentElement).getPropertyValue('--bg-card');
+                    ctx.fill();
+
+                    ctx.strokeStyle = 'rgba(0,0,0,0.06)';
+                    ctx.lineWidth = 0.6;
+                    ctx.stroke();
+
+                    // draw city markers and dotted guide lines for visible cities
+                    try {
+                        const rot = projection.rotate();
+                        const centre = [-rot[0], -rot[1]];
+                        Object.keys(cities).forEach(k => {
+                            const c = cities[k];
+                            const visible = d3.geoDistance([c.lon, c.lat], centre) < Math.PI / 2;
+                            if (!visible) return;
+                            const p = projection([c.lon, c.lat]);
+                            if (!p) return;
+                            // green dot with subtle white ring and text label
+                            ctx.beginPath();
+                            ctx.fillStyle = getComputedStyle(document.documentElement).getPropertyValue('--green') || '#2D5A3D';
+                            ctx.arc(p[0], p[1], 5, 0, Math.PI * 2);
+                            ctx.fill();
+                            ctx.beginPath();
+                            ctx.lineWidth = 1;
+                            ctx.strokeStyle = 'rgba(255,255,255,0.9)';
+                            ctx.arc(p[0], p[1], 7, 0, Math.PI * 2);
+                            ctx.stroke();
+
+                            // label
+                            ctx.font = Math.max(10, Math.round(Math.min(width, height) * 0.03)) + 'px Jost, sans-serif';
+                            ctx.fillStyle = getComputedStyle(document.documentElement).getPropertyValue('--ink') || '#1A1A14';
+                            ctx.textAlign = 'left';
+                            ctx.textBaseline = 'middle';
+                            const label = c.label || k.toUpperCase();
+                            ctx.fillText(label, p[0] + 10, p[1]);
+                        });
+                    } catch (e) {
+                        console.warn('marker draw error', e);
+                    }
+                }
+                ctx.restore();
+            }
+
+            function loadWorld() {
+                fetch('https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json').then(r => r.json()).then(world => {
+                    const land = topojson.feature(world, world.objects.countries);
+                    landGeo = land;
+                    draw();
+                }).catch(e => console.error(e));
+            }
+
+            // animate rotation to target lon/lat
+            let anim = null;
+            function rotateTo(lon, lat, duration = 900) {
+                const start = projection.rotate();
+                const target = [-lon, -lat, 0];
+                const interp = d3.interpolate(start, target);
+                const t0 = performance.now();
+                if (anim) cancelAnimationFrame(anim);
+                function step(now) {
+                    const u = Math.min(1, (now - t0) / duration);
+                    const v = d3.easeCubic(u);
+                    const r = interp(v);
+                    projection.rotate(r);
+                    draw();
+                    if (u < 1) anim = requestAnimationFrame(step);
+                }
+                anim = requestAnimationFrame(step);
+            }
+
+            // observer for timeline items
+            function initScrollObserver() {
+                const items = document.querySelectorAll('.exp-item');
+                const globeEl = document.querySelector('.globe-sticky');
+                const globeHeight = globeEl ? globeEl.offsetHeight : 0;
+                const mobile = window.matchMedia('(max-width:980px)').matches;
+                const options = {
+                    root: null,
+                    rootMargin: mobile ? `-${globeHeight + 16}px 0px -40% 0px` : '-30% 0px -30% 0px',
+                    threshold: mobile ? 0.3 : 0.45
+                };
+                const obs = new IntersectionObserver((entries) => {
+                    entries.forEach(ent => {
+                        if (ent.isIntersecting) {
+                            document.querySelectorAll('.exp-item').forEach(i => i.classList.remove('highlight'));
+                            ent.target.classList.add('highlight');
+                            const city = ent.target.dataset.city || 'london';
+                            const c = cities[city] || cities['london'];
+                            rotateTo(c.lon, c.lat, 1000);
+                        }
+                    });
+                }, options);
+                items.forEach(it => obs.observe(it));
+                // clicking an item should scroll it just below the globe and focus the globe immediately
+                items.forEach(it => {
+                    it.style.cursor = 'pointer';
+                    it.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        const rect = it.getBoundingClientRect();
+                        const scrollTop = window.scrollY + rect.top - globeHeight - 16;
+                        window.scrollTo({ top: Math.max(0, scrollTop), behavior: 'smooth' });
+                        document.querySelectorAll('.exp-item').forEach(i => i.classList.remove('highlight'));
+                        it.classList.add('highlight');
+                        const city = it.dataset.city || 'london';
+                        const c = cities[city] || cities['london'];
+                        rotateTo(c.lon, c.lat, 900);
+                    });
+                });
+            }
+
+            // on load
+            window.addEventListener('load', () => {
+                loadWorld();
+                resize();
+                initScrollObserver();
+                window.addEventListener('resize', resize);
+                // small initial rotation
+                rotateTo(cities.london.lon, cities.london.lat, 300);
+            });
+
+        })();
+    </script>
+
+    <script>
+        // small helpers reused from index
+        function toggleMenu() { document.getElementById('nav-links').classList.toggle('open'); }
+        function filterExp(cat, btn) {
+            document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            document.querySelectorAll('.exp-item').forEach(item => {
+                const cats = item.dataset.cats || '';
+                item.style.display = (cat === 'all' || cats.includes(cat)) ? '' : 'none';
+            });
+        }
+    </script>
+
+</body>
+
+</html>

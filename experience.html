@@ -1,493 +1,544 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="International arbitration lawyer, dual India–New York qualified. Investment treaty arbitration, ISDS reform, and international environmental law. Currently in London at Debevoise &amp; Plimpton and Three Crowns.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Jost:wght@300;400;500&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-  <title>Experience | Abhishree Manikantan</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="International arbitration lawyer, dual India–New York qualified. Investment treaty arbitration, ISDS reform, and international environmental law. Currently in London at Debevoise &amp; Plimpton and Three Crowns.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Jost:wght@300;400;500&family=DM+Mono:wght@300;400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Experience | Abhishree Manikantan</title>
 </head>
+
 <body>
 
-  <nav>
-    <a href="index.html" class="nav-logo">AM</a>
-    <div class="nav-links" id="nav-links">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="experience.html" class="active">Experience</a>
-      <a href="publications.html">Publications</a>
-      <a href="contact.html">Contact</a>
-      <a href="contact.html" class="nav-cta btn-primary">Get in Touch</a>
-    </div>
-    <div class="hamburger" id="hamburger" onclick="toggleMenu()">
-      <span></span><span></span><span></span>
-    </div>
-  </nav>
+    <nav>
+        <a href="index.html" class="nav-logo">AM</a>
+        <div class="nav-links" id="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="experience.html" class="active">Experience</a>
+            <a href="publications.html">Publications</a>
+            <a href="contact.html">Contact</a>
+            <a href="contact.html" class="nav-cta btn-primary">Get in Touch</a>
+        </div>
+        <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+            <span></span><span></span><span></span>
+        </div>
+    </nav>
 
-  <main class="page-main">
-<div class="page-header page-header-flex">
-      <div>
-        <div class="page-header-eyebrow">Experience</div>
-        <h2>Practice, Policy<br><em>and Research</em></h2>
-      </div>
-      <div class="exp-globe-wrap">
-        <canvas id="worldMap" width="220" height="220"></canvas>
-      </div>
-    </div>
-
-    <div class="exp-wrap">
-      <div class="filter-bar">
-        <button class="filter-btn active" onclick="filterExp('all',this)">All</button>
-        <button class="filter-btn" onclick="filterExp('arb',this)">Arbitration Practice</button>
-        <button class="filter-btn" onclick="filterExp('pol',this)">Policy &amp; Research</button>
-      </div>
-
-      <div class="exp-timeline">
-
-        <!-- THREE CROWNS — UPCOMING -->
-        <div class="exp-item" data-cats="arb">
-          <div class="exp-dot"></div>
-          <div class="exp-card upcoming" onclick="toggleExp(this)">
-            <div class="exp-meta">
-              <div class="exp-role">Intern, International Arbitration</div>
-              <div class="exp-dates">Jul – Dec 2026</div>
+    <main class="page-main">
+        <div class="page-header page-header-flex">
+            <div>
+                <div class="page-header-eyebrow">Experience</div>
+                <h2>Practice, Policy<br><em>and Research</em></h2>
             </div>
-            <div class="exp-org">Three Crowns LLP · London</div>
-            <div class="exp-tags">
-              <span class="exp-upcoming-badge">Confirmed · Upcoming</span>
-              <span class="exp-tag arb">Arbitration</span>
+            <div class="exp-globe-wrap">
+                <canvas id="worldMap" width="220" height="220"></canvas>
             </div>
-            <div class="exp-detail">
-              <ul>
-                <li>Three Crowns is a globally recognised arbitration boutique, known for complex commercial and
-                  investment treaty proceedings.</li>
-                <li>Consecutive London placements at Debevoise &amp; Plimpton and Three Crowns — both internationally
-                  recognised dispute resolution practices — represent a deliberate, sustained investment in London
-                  market exposure.</li>
-              </ul>
-            </div>
-          </div>
         </div>
 
-        <!-- DEBEVOISE -->
-        <div class="exp-item" data-cats="arb">
-          <div class="exp-dot"></div>
-          <div class="exp-card" onclick="toggleExp(this)">
-            <div class="exp-meta">
-              <div class="exp-role">Intern, International Dispute Resolution Group</div>
-              <div class="exp-dates">Feb - June 2026</div>
+        <div class="exp-wrap">
+            <div class="filter-bar">
+                <button class="filter-btn active" onclick="filterExp('all',this)">All</button>
+                <button class="filter-btn" onclick="filterExp('arb',this)">Arbitration Practice</button>
+                <button class="filter-btn" onclick="filterExp('pol',this)">Policy &amp; Research</button>
             </div>
-            <div class="exp-org">Debevoise &amp; Plimpton LLP · London</div>
-            <div class="exp-tags"><span class="exp-tag arb">Arbitration</span></div>
-            <div class="exp-detail">
-              <ul>
-                <li>Researched and drafted agency law issue in a skeleton argument for a complex LCIA insurance
-                  arbitration.</li>
-                <li>Monitored UNCITRAL Working Group III sessions and produced client-facing updates tracking
-                  developments in ISDS reform.</li>
-                <li>Independently managed client communications, collected SAR evidence, and drafted a skeleton witness
-                  statement for a pro bono matter.</li>
-              </ul>
+
+            <div class="exp-timeline">
+
+                <!-- THREE CROWNS — UPCOMING -->
+                <div class="exp-item" data-cats="arb">
+                    <div class="exp-dot"></div>
+                    <div class="exp-card upcoming" onclick="toggleExp(this)">
+                        <div class="exp-meta">
+                            <div class="exp-role">Intern, International Arbitration</div>
+                            <div class="exp-dates">Jul – Dec 2026</div>
+                        </div>
+                        <div class="exp-org">Three Crowns LLP · London</div>
+                        <div class="exp-tags">
+                            <span class="exp-upcoming-badge">Confirmed · Upcoming</span>
+                            <span class="exp-tag arb">Arbitration</span>
+                        </div>
+                        <div class="exp-detail">
+                            <ul>
+                                <li>Three Crowns is a globally recognised arbitration boutique, known for complex
+                                    commercial and
+                                    investment treaty proceedings.</li>
+                                <li>Consecutive London placements at Debevoise &amp; Plimpton and Three Crowns — both
+                                    internationally
+                                    recognised dispute resolution practices — represent a deliberate, sustained
+                                    investment in London
+                                    market exposure.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- DEBEVOISE -->
+                <div class="exp-item" data-cats="arb">
+                    <div class="exp-dot"></div>
+                    <div class="exp-card" onclick="toggleExp(this)">
+                        <div class="exp-meta">
+                            <div class="exp-role">Intern, International Dispute Resolution Group</div>
+                            <div class="exp-dates">Feb - June 2026</div>
+                        </div>
+                        <div class="exp-org">Debevoise &amp; Plimpton LLP · London</div>
+                        <div class="exp-tags"><span class="exp-tag arb">Arbitration</span></div>
+                        <div class="exp-detail">
+                            <ul>
+                                <li>Researched and drafted agency law issue in a skeleton argument for a complex LCIA
+                                    insurance
+                                    arbitration.</li>
+                                <li>Monitored UNCITRAL Working Group III sessions and produced client-facing updates
+                                    tracking
+                                    developments in ISDS reform.</li>
+                                <li>Independently managed client communications, collected SAR evidence, and drafted a
+                                    skeleton witness
+                                    statement for a pro bono matter.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- IISD -->
+                <div class="exp-item" data-cats="pol">
+                    <div class="exp-dot"></div>
+                    <div class="exp-card" onclick="toggleExp(this)">
+                        <div class="exp-meta">
+                            <div class="exp-role">IFD Fellow, Economic Law &amp; Policy — Sustainable Investments</div>
+                            <div class="exp-dates">Sept – Nov 2025</div>
+                        </div>
+                        <div class="exp-org">International Institute for Sustainable Development (IISD) · Geneva</div>
+                        <div class="exp-tags"><span class="exp-tag pol">Policy</span><span class="exp-tag pol">ISDS
+                                Reform</span>
+                        </div>
+                        <div class="exp-detail">
+                            <ul>
+                                <li>Analysed 60+ stakeholder submissions to IISD's public consultation and produced
+                                    draft policy report
+                                    identifying common concerns and reform priorities.</li>
+                                <li>Drafted policy briefs on investment treaty design, state consent, and dispute
+                                    prevention mechanisms.
+                                </li>
+                                <li>Published two institutional policy reports (2026): <em>Rethinking Investment
+                                        Treaties Public
+                                        Consultations</em> and <em>Unpacking National Investment Laws: Dispute
+                                        Settlement Function</em>.
+                                </li>
+                                <li>Case note on <em>Qatar Pharma et al. v. Saudi Arabia</em> published in IISD
+                                    Investment Treaty News.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- S&A -->
+                <div class="exp-item" data-cats="arb">
+                    <div class="exp-dot"></div>
+                    <div class="exp-card" onclick="toggleExp(this)">
+                        <div class="exp-meta">
+                            <div class="exp-role">Associate, Arbitration &amp; Disputes</div>
+                            <div class="exp-dates">Jul 2022 – May 2024</div>
+                        </div>
+                        <div class="exp-org">S&amp;A Law Offices · New Delhi</div>
+                        <div class="exp-tags"><span class="exp-tag arb">Arbitration</span></div>
+                        <div class="exp-detail">
+                            <ul>
+                                <li>Advised on disputes valued above USD 36 million in infrastructure and mining
+                                    sectors, primarily
+                                    against state entities — investor-state adjacent from day one.</li>
+                                <li>Drafted statements of claim, rejoinders, notices of dispute, cross-examination
+                                    questions, and
+                                    argument notes across multiple proceedings.</li>
+                                <li>Research portfolio: damages quantification, expert credibility, force majeure, civil
+                                    procedure, and
+                                    contract law.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- EXPO -->
+                <div class="exp-item" data-cats="arb">
+                    <div class="exp-dot"></div>
+                    <div class="exp-card" onclick="toggleExp(this)">
+                        <div class="exp-meta">
+                            <div class="exp-role">Legal Intern — International Contracts &amp; IP</div>
+                            <div class="exp-dates">Dec 2018 &amp; Oct 2021</div>
+                        </div>
+                        <div class="exp-org">IAA Middle East Legal Consultants · Expo 2020 Site Office, Dubai</div>
+                        <div class="exp-tags"><span class="exp-tag arb">Commercial</span></div>
+                        <div class="exp-detail">
+                            <ul>
+                                <li>Cross-border commercial contracting across a multi-jurisdictional environment —
+                                    drafting contracts,
+                                    MoUs, and conducting policy review for Expo 2020.</li>
+                                <li>In the 2021 internship, independently managed all IP infringement cases arising at
+                                    the Expo 2020
+                                    site — client-facing responsibility with minimal supervision.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- DMRC -->
+                <div class="exp-item" data-cats="arb pol">
+                    <div class="exp-dot"></div>
+                    <div class="exp-card" onclick="toggleExp(this)">
+                        <div class="exp-meta">
+                            <div class="exp-role">Intern, Legal Department (Arbitration Team)</div>
+                            <div class="exp-dates">Sep 2021</div>
+                        </div>
+                        <div class="exp-org">Delhi Metro Rail Corporation (DMRC) · New Delhi</div>
+                        <div class="exp-tags"><span class="exp-tag arb">Arbitration</span><span
+                                class="exp-tag pol">State
+                                Entity</span></div>
+                        <div class="exp-detail">
+                            <ul>
+                                <li>Worked with the arbitration team of a major state enterprise jointly owned by the
+                                    Government of
+                                    India and Government of Delhi.</li>
+                                <li>Attended live arbitration proceedings and High Court hearings, observing dispute
+                                    management from the
+                                    respondent state-entity perspective.</li>
+                                <li>Exposure to Section 9 (interim relief), Section 34 (setting aside) and Section 11
+                                    (appointment of
+                                    arbitrator) petitions — gained clear understanding of how state respondents approach
+                                    disputes.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CEERA -->
+                <div class="exp-item" data-cats="pol">
+                    <div class="exp-dot"></div>
+                    <div class="exp-card" onclick="toggleExp(this)">
+                        <div class="exp-meta">
+                            <div class="exp-role">Research Intern</div>
+                            <div class="exp-dates">Jun – Jul 2020</div>
+                        </div>
+                        <div class="exp-org">CEERA, National Law School of India University (NLSIU) · Bengaluru</div>
+                        <div class="exp-tags"><span class="exp-tag pol">Environmental Law</span></div>
+                        <div class="exp-detail">
+                            <ul>
+                                <li>Contributed to Chapter 5 in <em>Chemical and Hazardous Waste in India: A Sectoral
+                                        Analysis</em>
+                                    (CEERA/NLSIU, August 2021).</li>
+                                <li>Research examined enforcement of multilateral agreements on chemical safety across
+                                    the US, EU, and
+                                    Thailand.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- VIDHI -->
+                <div class="exp-item" data-cats="pol">
+                    <div class="exp-dot"></div>
+                    <div class="exp-card" onclick="toggleExp(this)">
+                        <div class="exp-meta">
+                            <div class="exp-role">Member — Kautilya Society</div>
+                            <div class="exp-dates">Oct 2020 – Jun 2021</div>
+                        </div>
+                        <div class="exp-org">Vidhi Centre for Legal Policy · New Delhi</div>
+                        <div class="exp-tags"><span class="exp-tag pol">Policy</span></div>
+                        <div class="exp-detail">
+                            <ul>
+                                <li>India's most respected independent legal think tank, producing legislative reform
+                                    reports used
+                                    directly by Parliament.</li>
+                                <li>Attended workshops on Legislative Drafting and presented a report on the
+                                    'Specificity of
+                                    Legislation' at a Public Health Emergency Workshop.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div><!-- /timeline -->
+
+            <!-- LEADERSHIP -->
+            <div style="margin-top:72px">
+                <div class="section-label">Leadership &amp; Mentoring</div>
+                <h3 style="margin-bottom:6px;font-size:1.5rem">Beyond the practice record</h3>
+                <p style="color:var(--muted);font-size:0.88rem;margin-bottom:28px;max-width:64ch">Investment in others —
+                    as
+                    coach, editor, and mentor — running in parallel with a full practice and research career.</p>
+                <div class="leadership-grid">
+                    <div class="lead-card">
+                        <div class="lead-icon">📋</div>
+                        <div class="lead-head">Editorial Leadership</div>
+                        <div class="lead-body">Graduate Editor, NYU Journal of International Law and Politics. Deputy
+                            Editor-in-Chief, Indian Constitutional Law Review (2019–2021) — oversaw Editions X, XI &amp;
+                            XII and
+                            introduced the journal's first double-blind peer review system. Editorial experience across
+                            two
+                            jurisdictions and five years.</div>
+                        <div class="lead-chips">
+                            <span class="lead-chip">JILP</span><span class="lead-chip">ICLR</span><span
+                                class="lead-chip">Peer Review
+                                Reform</span>
+                        </div>
+                    </div>
+                    <div class="lead-card">
+                        <div class="lead-icon">🏆</div>
+                        <div class="lead-head">Teaching &amp; Coaching</div>
+                        <div class="lead-body">Moot court strategist for five SLS Pune teams across national and
+                            international
+                            competitions — including the 26th Stetson IEMCC and the UPES–Paras Diwan Energy Law Moot.
+                            Head and
+                            Advisor, Career &amp; Professional Development Cell across five years — responsible for
+                            recruiter
+                            relationships, on-campus placement drives, and professional development programming for the
+                            entire student
+                            body.</div>
+                        <div class="lead-chips">
+                            <span class="lead-chip">5 Teams Coached</span><span class="lead-chip">CPDC Head, 5
+                                Yrs</span>
+                        </div>
+                    </div>
+                    <div class="lead-card">
+                        <div class="lead-icon">🤝</div>
+                        <div class="lead-head">Mentoring</div>
+                        <div class="lead-body">Peer mentor to six first-year students under the Symbiosis Law School
+                            Peer Assistance
+                            Programme — supporting academic, professional, and extracurricular development through a
+                            fully virtual
+                            academic year during COVID.</div>
+                        <div class="lead-chips">
+                            <span class="lead-chip">6 Mentees</span><span class="lead-chip">Peer Assistance
+                                Programme</span>
+                        </div>
+                    </div>
+                    <div class="lead-card">
+                        <div class="lead-icon">🌱</div>
+                        <div class="lead-head">Volunteering</div>
+                        <div class="lead-body"><strong>There Is No Earth B (TINEB), May–Nov 2023.</strong> Pro bono
+                            legal adviser to
+                            a grassroots environmental advocacy organisation — assessing campaign feasibility, advising
+                            on compliance
+                            risks, and bridging activist intent with legal reality.<br><br><strong>SVK Shikshan
+                                Sansthan, Nagpur, Dec
+                                2019.</strong> Delivered foundational education and vocational training to
+                            intellectually challenged
+                            adults — enabling economic employment and holistic development.</div>
+                        <div class="lead-chips">
+                            <span class="lead-chip">Environmental Advocacy</span><span class="lead-chip">Community
+                                Education</span>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
+
         </div>
+    </main>
 
-        <!-- IISD -->
-        <div class="exp-item" data-cats="pol">
-          <div class="exp-dot"></div>
-          <div class="exp-card" onclick="toggleExp(this)">
-            <div class="exp-meta">
-              <div class="exp-role">IFD Fellow, Economic Law &amp; Policy — Sustainable Investments</div>
-              <div class="exp-dates">Sept – Nov 2025</div>
-            </div>
-            <div class="exp-org">International Institute for Sustainable Development (IISD) · Geneva</div>
-            <div class="exp-tags"><span class="exp-tag pol">Policy</span><span class="exp-tag pol">ISDS Reform</span>
-            </div>
-            <div class="exp-detail">
-              <ul>
-                <li>Analysed 60+ stakeholder submissions to IISD's public consultation and produced draft policy report
-                  identifying common concerns and reform priorities.</li>
-                <li>Drafted policy briefs on investment treaty design, state consent, and dispute prevention mechanisms.
-                </li>
-                <li>Published two institutional policy reports (2026): <em>Rethinking Investment Treaties Public
-                    Consultations</em> and <em>Unpacking National Investment Laws: Dispute Settlement Function</em>.
-                </li>
-                <li>Case note on <em>Qatar Pharma et al. v. Saudi Arabia</em> published in IISD Investment Treaty News.
-                </li>
-              </ul>
-            </div>
-          </div>
+    <footer>
+        <span
+            style="font-style:italic;font-family:'Cormorant Garamond',serif;font-size:0.95rem;color:var(--ink-mid)">Abhishree
+            Manikantan</span>
+        <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="experience.html">Experience</a>
+            <a href="publications.html">Publications</a>
+            <a href="contact.html">Contact</a>
         </div>
+        <span>India · New York · London</span>
+    </footer>
 
-        <!-- S&A -->
-        <div class="exp-item" data-cats="arb">
-          <div class="exp-dot"></div>
-          <div class="exp-card" onclick="toggleExp(this)">
-            <div class="exp-meta">
-              <div class="exp-role">Associate, Arbitration &amp; Disputes</div>
-              <div class="exp-dates">Jul 2022 – May 2024</div>
-            </div>
-            <div class="exp-org">S&amp;A Law Offices · New Delhi</div>
-            <div class="exp-tags"><span class="exp-tag arb">Arbitration</span></div>
-            <div class="exp-detail">
-              <ul>
-                <li>Advised on disputes valued above USD 36 million in infrastructure and mining sectors, primarily
-                  against state entities — investor-state adjacent from day one.</li>
-                <li>Drafted statements of claim, rejoinders, notices of dispute, cross-examination questions, and
-                  argument notes across multiple proceedings.</li>
-                <li>Research portfolio: damages quantification, expert credibility, force majeure, civil procedure, and
-                  contract law.</li>
-              </ul>
-            </div>
-          </div>
-        </div>
+    <script src="main.js"></script>
 
-        <!-- EXPO -->
-        <div class="exp-item" data-cats="arb">
-          <div class="exp-dot"></div>
-          <div class="exp-card" onclick="toggleExp(this)">
-            <div class="exp-meta">
-              <div class="exp-role">Legal Intern — International Contracts &amp; IP</div>
-              <div class="exp-dates">Dec 2018 &amp; Oct 2021</div>
-            </div>
-            <div class="exp-org">IAA Middle East Legal Consultants · Expo 2020 Site Office, Dubai</div>
-            <div class="exp-tags"><span class="exp-tag arb">Commercial</span></div>
-            <div class="exp-detail">
-              <ul>
-                <li>Cross-border commercial contracting across a multi-jurisdictional environment — drafting contracts,
-                  MoUs, and conducting policy review for Expo 2020.</li>
-                <li>In the 2021 internship, independently managed all IP infringement cases arising at the Expo 2020
-                  site — client-facing responsibility with minimal supervision.</li>
-              </ul>
-            </div>
-          </div>
-        </div>
+    <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/topojson-client@3.1.0/dist/topojson-client.min.js"></script>
+    <script>
+        (function () {
+            var WORLD_URL = 'https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json';
+            var cities = {
+                london: { lon: -0.1, lat: 51.5, label: 'LONDON', main: true, lx: -1 },
+                delhi: { lon: 77.2, lat: 28.6, label: 'DELHI', main: true, lx: 1 },
+                newyork: { lon: -74, lat: 40.7, label: 'NEW YORK', main: true, lx: -1 },
+                geneva: { lon: 6.1, lat: 46.2, label: 'GENEVA', main: false, lx: -1 }
+            };
+            var arcs = [
+                { from: 'london', to: 'delhi', delay: 500, dur: 1800 },
+                { from: 'london', to: 'newyork', delay: 1400, dur: 1600 },
+                { from: 'london', to: 'geneva', delay: 2200, dur: 900 },
+                { from: 'newyork', to: 'delhi', delay: 2900, dur: 2400 }
+            ];
 
-        <!-- DMRC -->
-        <div class="exp-item" data-cats="arb pol">
-          <div class="exp-dot"></div>
-          <div class="exp-card" onclick="toggleExp(this)">
-            <div class="exp-meta">
-              <div class="exp-role">Intern, Legal Department (Arbitration Team)</div>
-              <div class="exp-dates">Sep 2021</div>
-            </div>
-            <div class="exp-org">Delhi Metro Rail Corporation (DMRC) · New Delhi</div>
-            <div class="exp-tags"><span class="exp-tag arb">Arbitration</span><span class="exp-tag pol">State
-                Entity</span></div>
-            <div class="exp-detail">
-              <ul>
-                <li>Worked with the arbitration team of a major state enterprise jointly owned by the Government of
-                  India and Government of Delhi.</li>
-                <li>Attended live arbitration proceedings and High Court hearings, observing dispute management from the
-                  respondent state-entity perspective.</li>
-                <li>Exposure to Section 9 (interim relief), Section 34 (setting aside) and Section 11 (appointment of
-                  arbitrator) petitions — gained clear understanding of how state respondents approach disputes.</li>
-              </ul>
-            </div>
-          </div>
-        </div>
+            var land = null, rafId = null, t0 = 0, rotation = [-25, -32, 0];
 
-        <!-- CEERA -->
-        <div class="exp-item" data-cats="pol">
-          <div class="exp-dot"></div>
-          <div class="exp-card" onclick="toggleExp(this)">
-            <div class="exp-meta">
-              <div class="exp-role">Research Intern</div>
-              <div class="exp-dates">Jun – Jul 2020</div>
-            </div>
-            <div class="exp-org">CEERA, National Law School of India University (NLSIU) · Bengaluru</div>
-            <div class="exp-tags"><span class="exp-tag pol">Environmental Law</span></div>
-            <div class="exp-detail">
-              <ul>
-                <li>Contributed to Chapter 5 in <em>Chemical and Hazardous Waste in India: A Sectoral Analysis</em>
-                  (CEERA/NLSIU, August 2021).</li>
-                <li>Research examined enforcement of multilateral agreements on chemical safety across the US, EU, and
-                  Thailand.</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <!-- VIDHI -->
-        <div class="exp-item" data-cats="pol">
-          <div class="exp-dot"></div>
-          <div class="exp-card" onclick="toggleExp(this)">
-            <div class="exp-meta">
-              <div class="exp-role">Member — Kautilya Society</div>
-              <div class="exp-dates">Oct 2020 – Jun 2021</div>
-            </div>
-            <div class="exp-org">Vidhi Centre for Legal Policy · New Delhi</div>
-            <div class="exp-tags"><span class="exp-tag pol">Policy</span></div>
-            <div class="exp-detail">
-              <ul>
-                <li>India's most respected independent legal think tank, producing legislative reform reports used
-                  directly by Parliament.</li>
-                <li>Attended workshops on Legislative Drafting and presented a report on the 'Specificity of
-                  Legislation' at a Public Health Emergency Workshop.</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-      </div><!-- /timeline -->
-
-      <!-- LEADERSHIP -->
-      <div style="margin-top:72px">
-        <div class="section-label">Leadership &amp; Mentoring</div>
-        <h3 style="margin-bottom:6px;font-size:1.5rem">Beyond the practice record</h3>
-        <p style="color:var(--muted);font-size:0.88rem;margin-bottom:28px;max-width:64ch">Investment in others — as
-          coach, editor, and mentor — running in parallel with a full practice and research career.</p>
-        <div class="leadership-grid">
-          <div class="lead-card">
-            <div class="lead-icon">📋</div>
-            <div class="lead-head">Editorial Leadership</div>
-            <div class="lead-body">Graduate Editor, NYU Journal of International Law and Politics. Deputy
-              Editor-in-Chief, Indian Constitutional Law Review (2019–2021) — oversaw Editions X, XI &amp; XII and
-              introduced the journal's first double-blind peer review system. Editorial experience across two
-              jurisdictions and five years.</div>
-            <div class="lead-chips">
-              <span class="lead-chip">JILP</span><span class="lead-chip">ICLR</span><span class="lead-chip">Peer Review
-                Reform</span>
-            </div>
-          </div>
-          <div class="lead-card">
-            <div class="lead-icon">🏆</div>
-            <div class="lead-head">Teaching &amp; Coaching</div>
-            <div class="lead-body">Moot court strategist for five SLS Pune teams across national and international
-              competitions — including the 26th Stetson IEMCC and the UPES–Paras Diwan Energy Law Moot. Head and
-              Advisor, Career &amp; Professional Development Cell across five years — responsible for recruiter
-              relationships, on-campus placement drives, and professional development programming for the entire student
-              body.</div>
-            <div class="lead-chips">
-              <span class="lead-chip">5 Teams Coached</span><span class="lead-chip">CPDC Head, 5 Yrs</span>
-            </div>
-          </div>
-          <div class="lead-card">
-            <div class="lead-icon">🤝</div>
-            <div class="lead-head">Mentoring</div>
-            <div class="lead-body">Peer mentor to six first-year students under the Symbiosis Law School Peer Assistance
-              Programme — supporting academic, professional, and extracurricular development through a fully virtual
-              academic year during COVID.</div>
-            <div class="lead-chips">
-              <span class="lead-chip">6 Mentees</span><span class="lead-chip">Peer Assistance Programme</span>
-            </div>
-          </div>
-          <div class="lead-card">
-            <div class="lead-icon">🌱</div>
-            <div class="lead-head">Volunteering</div>
-            <div class="lead-body"><strong>There Is No Earth B (TINEB), May–Nov 2023.</strong> Pro bono legal adviser to
-              a grassroots environmental advocacy organisation — assessing campaign feasibility, advising on compliance
-              risks, and bridging activist intent with legal reality.<br><br><strong>SVK Shikshan Sansthan, Nagpur, Dec
-                2019.</strong> Delivered foundational education and vocational training to intellectually challenged
-              adults — enabling economic employment and holistic development.</div>
-            <div class="lead-chips">
-              <span class="lead-chip">Environmental Advocacy</span><span class="lead-chip">Community Education</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </main>
-
-  <footer>
-    <span style="font-style:italic;font-family:'Cormorant Garamond',serif;font-size:0.95rem;color:var(--ink-mid)">Abhishree Manikantan</span>
-    <div class="footer-links">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="experience.html">Experience</a>
-      <a href="publications.html">Publications</a>
-      <a href="contact.html">Contact</a>
-    </div>
-    <span>India · New York · London</span>
-  </footer>
-
-  <script src="main.js"></script>
-
-  <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/topojson-client@3.1.0/dist/topojson-client.min.js"></script>
-  <script>
-    (function () {
-      var WORLD_URL = 'https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json';
-      var cities = {
-        london: { lon: -0.1, lat: 51.5, label: 'LONDON', main: true, lx: -1 },
-        delhi: { lon: 77.2, lat: 28.6, label: 'DELHI', main: true, lx: 1 },
-        newyork: { lon: -74, lat: 40.7, label: 'NEW YORK', main: true, lx: -1 },
-        geneva: { lon: 6.1, lat: 46.2, label: 'GENEVA', main: false, lx: -1 }
-      };
-      var arcs = [
-        { from: 'london', to: 'delhi', delay: 500, dur: 1800 },
-        { from: 'london', to: 'newyork', delay: 1400, dur: 1600 },
-        { from: 'london', to: 'geneva', delay: 2200, dur: 900 },
-        { from: 'newyork', to: 'delhi', delay: 2900, dur: 2400 }
-      ];
-
-      var land = null, rafId = null, t0 = 0, rotation = [-25, -32, 0];
-
-      function arcSegments(from, to, steps, projection) {
-        var interp = d3.geoInterpolate([from.lon, from.lat], [to.lon, to.lat]);
-        var segments = [], current = [];
-        for (var i = 0; i <= steps; i++) {
-          var p = projection(interp(i / steps));
-          if (p) {
-            current.push(p);
-          } else if (current.length) {
-            segments.push(current);
-            current = [];
-          }
-        }
-        if (current.length) segments.push(current);
-        return segments;
-      }
-
-      function initGlobe() {
-        var canvas = document.getElementById('worldMap');
-        if (!canvas || typeof d3 === 'undefined') return;
-        if (rafId) { cancelAnimationFrame(rafId); rafId = null; }
-
-        var s = canvas.offsetWidth || 220;
-        canvas.width = s; canvas.height = s;
-        var ctx = canvas.getContext('2d');
-        var cx = s / 2, cy = s / 2, r = s / 2 - 3;
-        var sf = s / 220;
-
-        var projection = d3.geoOrthographic()
-          .scale(r)
-          .translate([cx, cy])
-          .clipAngle(90);
-        var path = d3.geoPath().projection(projection).context(ctx);
-        var graticule = d3.geoGraticule().extent([[-180, -60], [180, 80]]).step([60, 30]);
-
-        function drawBase() {
-          projection.rotate(rotation);
-          ctx.save();
-          ctx.beginPath();
-          ctx.arc(cx, cy, r, 0, Math.PI * 2);
-          ctx.clip();
-
-          var shade = ctx.createRadialGradient(cx - r * 0.25, cy - r * 0.3, r * 0.05, cx, cy, r);
-          shade.addColorStop(0, '#FDFCF9');
-          shade.addColorStop(1, '#F0EBE2');
-          ctx.fillStyle = shade;
-          ctx.fillRect(0, 0, s, s);
-
-          ctx.beginPath();
-          path(graticule());
-          ctx.strokeStyle = 'rgba(45,90,61,0.08)';
-          ctx.lineWidth = 0.4 * sf;
-          ctx.setLineDash([2 * sf, 4 * sf]);
-          ctx.stroke();
-          ctx.setLineDash([]);
-
-          if (land) {
-            ctx.fillStyle = 'rgba(45,90,61,0.09)';
-            ctx.strokeStyle = 'rgba(45,90,61,0.45)';
-            ctx.lineWidth = 0.5 * sf;
-            ctx.beginPath();
-            path(land);
-            ctx.fill();
-            ctx.stroke();
-          }
-
-          ctx.restore();
-
-          ctx.beginPath();
-          ctx.arc(cx, cy, r, 0, Math.PI * 2);
-          ctx.strokeStyle = 'rgba(45,90,61,0.25)';
-          ctx.lineWidth = 1.2 * sf;
-          ctx.stroke();
-          ctx.beginPath();
-          ctx.arc(cx, cy, r + 7 * sf, 0, Math.PI * 2);
-          ctx.strokeStyle = 'rgba(45,90,61,0.06)';
-          ctx.lineWidth = 1 * sf;
-          ctx.stroke();
-        }
-
-        function frame(now) {
-          if (!t0) t0 = now;
-          var elapsed = now - t0;
-          rotation[0] += 0.015;
-
-          ctx.clearRect(0, 0, s, s);
-          drawBase();
-
-          arcs.forEach(function (a) {
-            if (elapsed < a.delay) return;
-            var prog = Math.min(1, (elapsed - a.delay) / a.dur);
-            var from = cities[a.from], to = cities[a.to];
-            var segments = arcSegments(from, to, 80, projection);
-            ctx.save();
-            ctx.beginPath();
-            ctx.arc(cx, cy, r, 0, Math.PI * 2);
-            ctx.clip();
-            ctx.strokeStyle = '#2D5A3D';
-            ctx.lineWidth = 1 * sf;
-            ctx.setLineDash([4 * sf, 3 * sf]);
-            ctx.globalAlpha = 0.6;
-            segments.forEach(function (pts) {
-              if (pts.length < 2) return;
-              var n = Math.max(1, Math.floor(pts.length * prog));
-              ctx.beginPath();
-              ctx.moveTo(pts[0][0], pts[0][1]);
-              for (var i = 1; i < n; i++) ctx.lineTo(pts[i][0], pts[i][1]);
-              ctx.stroke();
-            });
-            ctx.restore();
-          });
-
-          Object.keys(cities).forEach(function (k) {
-            var c = cities[k];
-            var p = projection([c.lon, c.lat]);
-            if (!p) return;
-            var pulse = 0.5 + 0.5 * Math.sin(elapsed * 0.003 + p[0]);
-            ctx.save();
-            ctx.beginPath();
-            ctx.arc(cx, cy, r, 0, Math.PI * 2);
-            ctx.clip();
-            ctx.beginPath();
-            ctx.arc(p[0], p[1], (c.main ? 9 : 6) * sf * (0.8 + 0.3 * pulse), 0, Math.PI * 2);
-            ctx.strokeStyle = c.main ? 'rgba(45,90,61,0.3)' : 'rgba(61,122,82,0.2)';
-            ctx.lineWidth = 0.7 * sf;
-            ctx.globalAlpha = 0.4 * (1 - pulse);
-            ctx.stroke();
-            ctx.beginPath();
-            ctx.arc(p[0], p[1], (c.main ? 4.5 : 3) * sf, 0, Math.PI * 2);
-            ctx.fillStyle = c.main ? '#2D5A3D' : '#3D7A52';
-            ctx.globalAlpha = 0.85 + 0.15 * pulse;
-            ctx.fill();
-            if (s > 140) {
-              ctx.font = (c.main ? 6.5 : 5.5) * sf + 'px "DM Mono",monospace';
-              ctx.fillStyle = c.main ? '#2D5A3D' : '#3D7A52';
-              ctx.globalAlpha = 0.85;
-              var lx = c.lx < 0 ? p[0] - (c.label.length * 3.8 * sf) : p[0] + 6 * sf;
-              ctx.fillText(c.label, lx, p[1] - 5 * sf);
+            function arcSegments(from, to, steps, projection) {
+                var interp = d3.geoInterpolate([from.lon, from.lat], [to.lon, to.lat]);
+                var segments = [], current = [];
+                for (var i = 0; i <= steps; i++) {
+                    var p = projection(interp(i / steps));
+                    if (p) {
+                        current.push(p);
+                    } else if (current.length) {
+                        segments.push(current);
+                        current = [];
+                    }
+                }
+                if (current.length) segments.push(current);
+                return segments;
             }
-            ctx.restore();
-          });
 
-          rafId = requestAnimationFrame(frame);
-        }
+            function initGlobe() {
+                var canvas = document.getElementById('worldMap');
+                if (!canvas || typeof d3 === 'undefined') return;
+                if (rafId) { cancelAnimationFrame(rafId); rafId = null; }
 
-        t0 = 0;
-        rafId = requestAnimationFrame(frame);
-      }
+                var s = canvas.offsetWidth || 220;
+                canvas.width = s; canvas.height = s;
+                var ctx = canvas.getContext('2d');
+                var cx = s / 2, cy = s / 2, r = s / 2 - 3;
+                var sf = s / 220;
 
-      function boot() {
-        if (!land) {
-          d3.json(WORLD_URL).then(function (world) {
-            land = topojson.feature(world, world.objects.land);
-          });
-        }
-        initGlobe();
-      }
+                var projection = d3.geoOrthographic()
+                    .scale(r)
+                    .translate([cx, cy])
+                    .clipAngle(90);
+                var path = d3.geoPath().projection(projection).context(ctx);
+                var graticule = d3.geoGraticule().extent([[-180, -60], [180, 80]]).step([60, 30]);
 
-      if (document.readyState === 'complete') boot();
-      else window.addEventListener('load', boot);
-      window.addEventListener('resize', function () { setTimeout(initGlobe, 100); });
-    })();
-  </script>
+                function drawBase() {
+                    projection.rotate(rotation);
+                    ctx.save();
+                    ctx.beginPath();
+                    ctx.arc(cx, cy, r, 0, Math.PI * 2);
+                    ctx.clip();
+
+                    var shade = ctx.createRadialGradient(cx - r * 0.25, cy - r * 0.3, r * 0.05, cx, cy, r);
+                    shade.addColorStop(0, '#FDFCF9');
+                    shade.addColorStop(1, '#F0EBE2');
+                    ctx.fillStyle = shade;
+                    ctx.fillRect(0, 0, s, s);
+
+                    ctx.beginPath();
+                    path(graticule());
+                    ctx.strokeStyle = 'rgba(45,90,61,0.08)';
+                    ctx.lineWidth = 0.4 * sf;
+                    ctx.setLineDash([2 * sf, 4 * sf]);
+                    ctx.stroke();
+                    ctx.setLineDash([]);
+
+                    if (land) {
+                        ctx.fillStyle = 'rgba(45,90,61,0.09)';
+                        ctx.strokeStyle = 'rgba(45,90,61,0.45)';
+                        ctx.lineWidth = 0.5 * sf;
+                        ctx.beginPath();
+                        path(land);
+                        ctx.fill();
+                        ctx.stroke();
+                    }
+
+                    ctx.restore();
+
+                    ctx.beginPath();
+                    ctx.arc(cx, cy, r, 0, Math.PI * 2);
+                    ctx.strokeStyle = 'rgba(45,90,61,0.25)';
+                    ctx.lineWidth = 1.2 * sf;
+                    ctx.stroke();
+                    ctx.beginPath();
+                    ctx.arc(cx, cy, r + 7 * sf, 0, Math.PI * 2);
+                    ctx.strokeStyle = 'rgba(45,90,61,0.06)';
+                    ctx.lineWidth = 1 * sf;
+                    ctx.stroke();
+                }
+
+                function frame(now) {
+                    if (!t0) t0 = now;
+                    var elapsed = now - t0;
+                    rotation[0] += 0.015;
+
+                    ctx.clearRect(0, 0, s, s);
+                    drawBase();
+
+                    arcs.forEach(function (a) {
+                        if (elapsed < a.delay) return;
+                        var prog = Math.min(1, (elapsed - a.delay) / a.dur);
+                        var from = cities[a.from], to = cities[a.to];
+                        var segments = arcSegments(from, to, 80, projection);
+                        ctx.save();
+                        ctx.beginPath();
+                        ctx.arc(cx, cy, r, 0, Math.PI * 2);
+                        ctx.clip();
+                        ctx.strokeStyle = '#2D5A3D';
+                        ctx.lineWidth = 1 * sf;
+                        ctx.setLineDash([4 * sf, 3 * sf]);
+                        ctx.globalAlpha = 0.6;
+                        segments.forEach(function (pts) {
+                            if (pts.length < 2) return;
+                            var n = Math.max(1, Math.floor(pts.length * prog));
+                            ctx.beginPath();
+                            ctx.moveTo(pts[0][0], pts[0][1]);
+                            for (var i = 1; i < n; i++) ctx.lineTo(pts[i][0], pts[i][1]);
+                            ctx.stroke();
+                        });
+                        ctx.restore();
+                    });
+
+                    Object.keys(cities).forEach(function (k) {
+                        var c = cities[k];
+                        var p = projection([c.lon, c.lat]);
+                        if (!p) return;
+                        var pulse = 0.5 + 0.5 * Math.sin(elapsed * 0.003 + p[0]);
+                        ctx.save();
+                        ctx.beginPath();
+                        ctx.arc(cx, cy, r, 0, Math.PI * 2);
+                        ctx.clip();
+                        ctx.beginPath();
+                        ctx.arc(p[0], p[1], (c.main ? 9 : 6) * sf * (0.8 + 0.3 * pulse), 0, Math.PI * 2);
+                        ctx.strokeStyle = c.main ? 'rgba(45,90,61,0.3)' : 'rgba(61,122,82,0.2)';
+                        ctx.lineWidth = 0.7 * sf;
+                        ctx.globalAlpha = 0.4 * (1 - pulse);
+                        ctx.stroke();
+                        ctx.beginPath();
+                        ctx.arc(p[0], p[1], (c.main ? 4.5 : 3) * sf, 0, Math.PI * 2);
+                        ctx.fillStyle = c.main ? '#2D5A3D' : '#3D7A52';
+                        ctx.globalAlpha = 0.85 + 0.15 * pulse;
+                        ctx.fill();
+                        if (s > 140) {
+                            ctx.font = (c.main ? 6.5 : 5.5) * sf + 'px "DM Mono",monospace';
+                            ctx.fillStyle = c.main ? '#2D5A3D' : '#3D7A52';
+                            ctx.globalAlpha = 0.85;
+                            var lx = c.lx < 0 ? p[0] - (c.label.length * 3.8 * sf) : p[0] + 6 * sf;
+                            ctx.fillText(c.label, lx, p[1] - 5 * sf);
+                        }
+                        ctx.restore();
+                    });
+
+                    rafId = requestAnimationFrame(frame);
+                }
+
+                t0 = 0;
+                rafId = requestAnimationFrame(frame);
+            }
+
+            function boot() {
+                if (!land) {
+                    d3.json(WORLD_URL).then(function (world) {
+                        land = topojson.feature(world, world.objects.land);
+                    });
+                }
+                initGlobe();
+            }
+
+            if (document.readyState === 'complete') boot();
+            else window.addEventListener('load', boot);
+            window.addEventListener('resize', function () { setTimeout(initGlobe, 100); });
+        })();
+    </script>
 </body>
+
 </html>

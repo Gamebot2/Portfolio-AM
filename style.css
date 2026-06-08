@@ -175,11 +175,16 @@
       font-family: 'Jost', sans-serif;
       font-weight: 400;
       background: none;
+      position: relative;
+      z-index: 2;
+      border-radius: 4px;
     }
 
     .nav-cta:hover {
       background: var(--green);
-      color: var(--bg);
+      color: #ffffff;
+      box-shadow: 0 1px 0 rgba(0,0,0,0.02) inset;
+      transform: translateY(-0px);
     }
 
     .hamburger {
@@ -364,6 +369,22 @@
     .btn-outline:hover {
       border-color: var(--green);
       color: var(--green);
+    }
+
+    /* When the header CTA also uses btn-primary, keep it as an outline by default */
+    .nav-cta.btn-primary {
+      background: none;
+      color: var(--green);
+      border: 1px solid var(--green);
+      padding: 7px 18px;
+      display: inline-flex;
+      align-items: center;
+      text-decoration: none;
+    }
+
+    .nav-cta.btn-primary:hover {
+      background: var(--green);
+      color: #ffffff;
     }
 
     /* Globe */
